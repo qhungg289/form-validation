@@ -6,49 +6,90 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Sign up</title>
 		<script defer src="main.js"></script>
+		<script
+			src="https://kit.fontawesome.com/313ff853e5.js"
+			crossorigin="anonymous"
+		></script>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+			rel="stylesheet"
+		/>
 	</head>
 	<body>
-		<h1>Sign up</h1>
+		<h1>Register</h1>
 		<form>
-			<div>
-				<label for="email">Email</label>
-				<input type="email" name="email" id="email" required />
+			<div class="input-container" id="email-container">
+				<i class="fas fa-envelope-square icon"></i>
+				<input
+					type="email"
+					name="email"
+					id="email"
+					class="input-field"
+					placeholder="Email"
+					required
+				/>
+				<i class="fas fa-check-circle status-valid"></i>
+				<i class="fas fa-times-circle status-invalid"></i>
 			</div>
-			<div>
-				<label for="country">Country</label>
+			<div class="input-container" id="country-container">
+				<i class="fas fa-globe-asia icon"></i>
 				<input
 					type="text"
 					name="country"
 					id="country"
+					class="input-field"
+					placeholder="Country"
 					required
 					maxlength="50"
 				/>
+				<i class="fas fa-check-circle status-valid"></i>
+				<i class="fas fa-times-circle status-invalid"></i>
 			</div>
-			<div>
-				<label for="zip-code">Zip code</label>
+			<div class="input-container" id="zip-code-container">
+				<i class="fas fa-mail-bulk icon"></i>
 				<input
 					type="text"
 					name="zip-code"
 					id="zip-code"
+					class="input-field"
+					placeholder="Zip Code"
 					required
 					minlength="4"
 					maxlength="12"
 				/>
+				<i class="fas fa-check-circle status-valid"></i>
+				<i class="fas fa-times-circle status-invalid"></i>
 			</div>
-			<div>
-				<label for="password">Password</label>
-				<input type="password" name="password" id="password" required />
+
+			<div class="input-container" id="password-container">
+				<i class="fas fa-key icon"></i>
+				<input
+					type="password"
+					name="password"
+					id="password"
+					class="input-field"
+					placeholder="Password"
+					required
+				/>
+				<i class="fas fa-check-circle status-valid"></i>
+				<i class="fas fa-times-circle status-invalid"></i>
 			</div>
-			<div>
-				<label for="confirm-password">Confirm password</label>
+			<div class="input-container" id="confirm-password-container">
+				<i class="fas fa-key icon"></i>
 				<input
 					type="password"
 					name="confirm-password"
 					id="confirm-password"
+					class="input-field"
+					placeholder="Confirm password"
 					required
 				/>
+				<i class="fas fa-check-circle status-valid"></i>
+				<i class="fas fa-times-circle status-invalid"></i>
 			</div>
-			<button type="submit">Submit</button>
+			<button type="submit" id="submit">Register</button>
 		</form>
 	</body>
 </html>
