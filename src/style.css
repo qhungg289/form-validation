@@ -1,7 +1,7 @@
 :root {
-	--accent: #5fb8de;
-	--valid: #59de7c;
-	--invalid: #ff3b52;
+	--accent: #1b4965;
+	--valid: #34d1bf;
+	--invalid: #eb5160;
 }
 
 * {
@@ -29,6 +29,7 @@ body {
 
 form {
 	width: 80%;
+	max-width: 600px;
 }
 
 .icon {
@@ -40,19 +41,20 @@ form {
 	border-radius: 8px 0 0 8px;
 }
 
-.status-valid {
-	visibility: hidden;
-	position: absolute;
-	right: 1rem;
-	top: 1rem;
-	color: var(--valid);
-}
-
+.status-valid,
 .status-invalid {
 	visibility: hidden;
 	position: absolute;
 	right: 1rem;
-	top: 1rem;
+	top: 0.9rem;
+	font-size: 1.25rem;
+}
+
+.status-valid {
+	color: var(--valid);
+}
+
+.status-invalid {
 	color: var(--invalid);
 }
 
@@ -67,7 +69,6 @@ form {
 
 .input-field:focus {
 	border: 2px solid var(--accent);
-	border-left: 2px solid transparent;
 }
 
 #submit {
