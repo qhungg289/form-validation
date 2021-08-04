@@ -28,6 +28,7 @@
 					id="email"
 					class="input-field"
 					placeholder="Email"
+					title="Your email go in here."
 					required
 				/>
 				<i class="fas fa-check-circle status-valid"></i>
@@ -41,8 +42,9 @@
 					id="country"
 					class="input-field"
 					placeholder="Country"
+					title="And your country in here."
 					required
-					maxlength="50"
+					pattern="[A-Za-z]{2,50}"
 				/>
 				<i class="fas fa-check-circle status-valid"></i>
 				<i class="fas fa-times-circle status-invalid"></i>
@@ -55,9 +57,9 @@
 					id="zip-code"
 					class="input-field"
 					placeholder="Zip Code"
+					pattern="[A-Za-z0-9]{4,12}"
 					required
-					minlength="4"
-					maxlength="12"
+					title="Zip Code need to be 4 at minimum, 12 at maximum."
 				/>
 				<i class="fas fa-check-circle status-valid"></i>
 				<i class="fas fa-times-circle status-invalid"></i>
@@ -71,6 +73,8 @@
 					id="password"
 					class="input-field"
 					placeholder="Password"
+					pattern=".{8,50}"
+					title="Password need to be atleast 8 characters long."
 					required
 				/>
 				<i class="fas fa-check-circle status-valid"></i>
@@ -84,6 +88,7 @@
 					id="confirm-password"
 					class="input-field"
 					placeholder="Confirm password"
+					title="Make sure this is the same as the password above."
 					required
 				/>
 				<i class="fas fa-check-circle status-valid"></i>
